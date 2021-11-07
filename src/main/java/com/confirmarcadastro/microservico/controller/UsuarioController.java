@@ -18,4 +18,9 @@ public class UsuarioController {
         return this.usuarioService.createUsuario(usuario);
     }
 
+    @GetMapping("teste")
+    public String createUsuario(){
+        return "teste";
+    }
+
 }
