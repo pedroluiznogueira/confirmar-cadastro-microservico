@@ -5,6 +5,8 @@ import com.confirmarcadastro.microservico.domain.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UsuarioService  {
 
@@ -15,4 +17,7 @@ public class UsuarioService  {
         return this.usuarioRepository.save(usuario);
     }
 
+    public List<Usuario> getUsuarios() {
+        return this.usuarioRepository.findAll();
+    }
 }

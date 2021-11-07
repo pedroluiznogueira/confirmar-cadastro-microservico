@@ -5,6 +5,8 @@ import com.confirmarcadastro.microservico.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin("*")
 @RequestMapping("usuario")
@@ -18,9 +20,9 @@ public class UsuarioController {
         return this.usuarioService.createUsuario(usuario);
     }
 
-    @GetMapping("teste")
-    public String createUsuario(){
-        return "teste";
+    @GetMapping("usuarios")
+    public List<Usuario> getUsuarios(){
+        return this.usuarioService.getUsuarios();
     }
 
 }
