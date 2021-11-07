@@ -1,6 +1,7 @@
 package com.confirmarcadastro.microservico.controller;
 
 import com.confirmarcadastro.microservico.domain.Confirmacao;
+import com.confirmarcadastro.microservico.domain.Usuario;
 import com.confirmarcadastro.microservico.service.ConfirmarCadastroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,8 +15,8 @@ public class ConfirmarCadastroController {
     private ConfirmarCadastroService cs;
 
     @PostMapping("confirmar")
-    public Confirmacao confirmarCadastro(@RequestBody Confirmacao confirmacao) {
-        return cs.confirmarCadastro(confirmacao);
+    public Usuario confirmarCadastro(@RequestBody Usuario usuario) {
+        return cs.createUsuario(usuario);
     }
 
 
